@@ -21,24 +21,7 @@
 html  {
 
 }
-/* queries for specific resolutions */
-@media (max-width: 768px) {
-  .masonry {
-      column-count: 1;
-  }
-  .card {
-    margin-bottom: 20px; /* Add margin below cards */
-  }
-}
 
-@media (max-width: 480px) {
-  .masonry {
-      column-count: 1;
-  }
-  .card {
-    margin-bottom: 500px; /* Add margin below cards */
-  }
-}
 
 /* Main styling */
 body {
@@ -377,6 +360,27 @@ body {
 
 .accordion-content p {
     margin: 0;
+}
+
+
+/* queries for specific resolutions */
+@media (max-width: 768px) {
+  .masonry {
+      column-count: 1;
+  }
+  .card {
+    margin-bottom: 20px; /* Add margin below cards */
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .card {
+    margin-bottom: 200px; /* Add margin below cards */
+  }
+  .masonry {
+    column-count: 1;
+  }
 }
 
 /*
