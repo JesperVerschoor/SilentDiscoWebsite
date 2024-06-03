@@ -125,7 +125,7 @@ body {
   
   .image-banner {
     position: relative;
-    width: 100%;
+
     overflow: hidden;
     
   }
@@ -245,11 +245,10 @@ body {
     display: flex;
     justify-content: space-between; /* Adjust space between items */
     flex-wrap: nowrap;              /* Prevent wrapping */
+
 }
 
-  .booqable-product {
-      flex: 1; /* Distribute space equally */
-  }
+
 
 
   /* Inspiratie pagina */
@@ -370,6 +369,10 @@ body {
   }
   .card {
     margin-bottom: 20px; /* Add margin below cards */
+  }
+  .products-container {
+    flex-direction: column;       /* Stack items vertically on smaller screens */
+    align-items: center;          /* Center items horizontally */
   }
 }
 
