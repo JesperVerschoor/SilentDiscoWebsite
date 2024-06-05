@@ -1,6 +1,7 @@
 Install nodeJS
 
 VSCode plugins:
+- live server
 - live preview
 - prettier code formatter
 - css language features
