@@ -53,6 +53,7 @@ body {
   
   .container {
     flex: 1;
+    margin-top: 20px;
   }
 
    
@@ -175,7 +176,11 @@ body {
     border: none;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px; 
+    padding: 0px, 0, 0, 0; 
+  }
+
+  .card-body {
+    flex-direction: column;
   }
   
   .card-title {
@@ -379,7 +384,7 @@ body {
 @media (max-width: 480px) {
   
   .card {
-    margin-bottom: 200px; /* Add margin below cards */
+    margin-bottom: 20px; /* Add margin below cards */
   }
   .masonry {
     column-count: 1;
