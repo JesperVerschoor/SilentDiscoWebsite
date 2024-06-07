@@ -25,11 +25,16 @@
                     <div class="col-12 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Geef de start- en einddatum van uw event aan</h5>
+                                <h5 class="card-title">
+                                    Geef de start- en einddatum van uw event aan
+                                </h5>
                                 <p class="card-text">
                                     Wij nemen na uw reservering contact met u op om de aflevering af te stemmen.
                                 <div class="booqable-datepicker"></div>
                                 </p>
+                                <!-- Info Icon -->
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                    data-target="#datumModal"></i>
                             </div>
                         </div>
                     </div>
@@ -37,9 +42,12 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Kies uw box</h5>
+                                <div class="card-text">Afhankelijk van het aantal bezoekers kiest een passende start
+                                    box.</div>
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal" data-target="#boxModal"></i>
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <div class="card-text">Boxen met één zender</div>
+                                        <div class="card-title">Boxen met één zender</div>
                                         <!-- <div class="booqable-product" data-id="feestbox-50p"></div>
                                     <div class="booqable-product" data-id="feestbox-2-30p"></div>
                                     <div class="booqable-product" data-id="feestbox-2-20p"></div>
@@ -49,29 +57,9 @@
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <div class="card-text">Boxen met twee zenders</div>
+                                        <div class="card-title">Boxen met twee zenders</div>
                                         <div class="booqable-product" data-id="silent-discobox-30p"></div>
                                         <div class="booqable-product" data-id="silent-discobox-50p"></div>
-                                    </div>
-</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Optioneel: Box uitbreiden</h5>
-                                    <div class="row">
-                                        <div class="col-12 col-md-6">
-                                            <h5>Extra koptelefoons</h5>
-                                            <div class="card-text">Verwacht u net iets meer mensen? Geen probleem!</div>
-                                            <div class="booqable-product" data-id="silentdisco-koptelefoon"></div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <h5>Extra zender</h5>
-                                            <div class="card-text">U kunt maximaal 3 zenders tegelijk gebruiken.</div>
-                                            <div class="booqable-product" data-id="zender"></div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -80,9 +68,32 @@
                     <div class="col-12 mb-4">
                         <div class="card">
                             <div class="card-body">
+                                <h5 class="card-title">Optioneel: Box uitbreiden</h5>
+                                <!-- Info Icon -->
+                                <i class="fas fa-info-circle info-icon" data-toggle="modal"
+                                    data-target="#extraModal"></i>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <h5>Extra koptelefoons</h5>
+                                        <div class="card-text">Verwacht u net iets meer mensen? Geen probleem!</div>
+                                        <div class="booqable-product" data-id="silentdisco-koptelefoon"></div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h5>Extra zender</h5>
+                                        <div class="card-text">U kunt maximaal 3 zenders tegelijk gebruiken.</div>
+                                        <div class="booqable-product" data-id="zender"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
 
-                                <h5 class="card-title">Optioneel: Verrijk uw feest!</h5>
-                                <!--<div class="row">
+                            <h5 class="card-title">Optioneel: Verrijk uw feest!</h5>
+                            <!--<div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="booqable-product" data-id="feestlamp"></div>
                                     </div>
@@ -90,16 +101,15 @@
                                         <div class="booqable-product" data-id="partytent-popup-3m-3m"></div>
                                     </div>
                                 </div>-->
-                                <!--<div class="row">
+                            <!--<div class="row">
                                     
                                         <div class="booqable-product-list" data-tags="extra"> </div>
                                     
                                 </div>-->
-                                <div class="row">
-                                    <div class="container" style="align-items: center;">
-                                        <div class="booqable-product-list"
-                                            data-categories="extra-b17d31f3-4b38-433e-a77d-14b20c274c6c" data-per="3">
-                                        </div>
+                            <div class="row">
+                                <div class="container" style="align-items: center;">
+                                    <div class="booqable-product-list"
+                                        data-categories="extra-b17d31f3-4b38-433e-a77d-14b20c274c6c" data-per="3">
                                     </div>
                                 </div>
                             </div>
@@ -108,10 +118,75 @@
                 </div>
             </div>
         </div>
+        <!-- datumModal -->
+        <div class="modal fade" id="datumModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Meerdere dagen?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        De meeste silent disco events betreffen één dagdeel; bv middag, avond en/of nacht. Daarom gaan
+                        wij
+                        uit van één vasttarief. Wanneer u een meerdaags event wenst, selecteer dan meerdere dagen.
+                        Wij nemen na uw aanvraag contact met u op om een persoonlijke aanbieding te maken.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- boxModal -->
+        <div class="modal fade" id="boxModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Welke box?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Het kiezen van de juiste box is simpel. Voor hoeveel gasten heeft u een koptelefoon nodig?
+                        Kies de box die daar het dichtsbij in de buurt komt. Daarna vult de extra koptelefoons aan in de
+                        volgende stap. Voorbeeld:</r>
+                        vb1: 25 gasten -> da kiest u de box van 20, en daarna 5 extra koptelefoons</p>
+
+                        <p>Het aantal zenders bepaalt het aantal kanalen. De koptelefoons kunnen maximaal drie kanalen
+                        ontvangen, dus u kunt maximaal met drie zenders werken. De kleine boxen bevatten één zender, de
+                        grotere (vanaf 30 personen) bevatten al twee zenders. U kunt de extra zender(s) toevoegen in de
+                        volgende stap.</p>
+
+                        <p>Voor ieder kanaal zult u een muziekbron moeten aansluiten. Deze leveren wij er niet bij. Wel zijn de 
+                        zenders uitgerust met bluetooth en dus kunt u met uw telefoon. laptop of tablet verbinden. Uiteraard 
+                        zijn bedrade opties ook mogelijk. Deze opties zijn RCA-tulp, of 3,5mm jack.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- zenderModal -->
+        <div class="modal fade" id="extraModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Meerdere zenders?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    </div>
+
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>

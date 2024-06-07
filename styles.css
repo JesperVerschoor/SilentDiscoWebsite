@@ -3,7 +3,7 @@
   --primary: #ee7f31;
   --secondary: #245742;
   --success: #28a745;
-  --info: #136db7;
+  --info: #FEB3D1;
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
@@ -196,6 +196,8 @@ h1 {
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  position: relative;
+  padding-right: 30px; /* Adjust the padding to create space for the icon */
 }
 
 .card-zoom {
@@ -205,6 +207,16 @@ h1 {
 
 .card-zoom:hover {
   transform: scale(1.05);
+}
+
+/* Style for the info icon */
+.info-icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  color: var(--info); /* Bootstrap primary color */
 }
 
 /* Information Section customization */
@@ -405,6 +417,14 @@ footer a:hover {
     align-items: center;
     /* Center items horizontally */
   }
+  .card-title {
+    padding-right: 40px; /* Increase padding if needed */
+}
+
+.info-icon {
+    font-size: 1em; /* Adjust the icon size for smaller screens */
+
+}
 }
 
 @media (max-width: 480px) {

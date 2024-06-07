@@ -16,6 +16,9 @@ var booqableOptions = {
     company: "f6757dda-e195-43ca-ae5a-772f4b64db0a",
 };
 
+//reserveren information icon
+
+
 //FAQ accordion list
 document.addEventListener('DOMContentLoaded', function() {
     var accordionItems = document.querySelectorAll('.accordion-item');
