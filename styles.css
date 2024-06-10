@@ -46,9 +46,20 @@ body {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
 .btn-reserveren:hover{
   border-color: var(--light);
   color: var(--text);
+}
+
+/* extended version of btn-reserver */
+.btn-reserver-smallscreen {
+  color: var(--text);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: none;
 }
 
 .btn:hover {
@@ -429,6 +440,19 @@ footer a:hover {
 
 /* queries for specific resolutions */
 @media (max-width: 768px) {
+  .banner-text .btn {
+      display: none; /* Hide the button in the banner on smaller screens */
+  }
+
+  .btn-reserver-smallscreen {
+    color: var(--text);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    margin-top: 20px;
+    margin-bottom: -30px;
+    display: block;
+  }
+
   .masonry {
     column-count: 1;
   }
