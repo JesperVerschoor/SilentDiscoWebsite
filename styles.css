@@ -33,6 +33,29 @@ body {
   min-height: 100vh;
 }
 
+.btn {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.btn-reserveren {
+  color: var(--text);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.btn-reserveren:hover{
+  border-color: var(--light);
+  color: var(--text);
+}
+
+.btn:hover {
+  border-color: var(--light);
+  background-color: var(--primary);
+}
+
 /* styles.css */
 @font-face {
   font-family: 'Nohemi';
@@ -179,7 +202,11 @@ h1 {
   background-color: var(--primary);
 }
 
-.banner-text .btn:hover {}
+.banner-text .btn:hover {
+      border-color: var(--light);
+    background-color: var(--primary);
+    /* Underline color and thickness */
+  }
 
 /* Card customization */
 .card {
