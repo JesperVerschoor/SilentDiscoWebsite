@@ -2,24 +2,34 @@
 :root {
   --primary: #ee7f31;
   --secondary: #245742;
+  --navbar: #d6f566;
   --success: #28a745;
   --info: #FEB3D1;
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  
+  --geel: #f8d354;
+  --roze: #f4b6d1;
+  --donkerrood: #470f0f;
 
   --body-bg: #FCF9f0;
   --body-color: var(--dark);
 
-  --text: var(--light);
+  --text: var(--dark);
   --text-title: #343a40;
   --text-navbar: #343a40;
   --text-footer: var(--light);
 }
 
-html {}
+html {
+  box-sizing: border-box;
+}
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /* Main styling */
 body {
@@ -33,38 +43,116 @@ body {
   min-height: 100vh;
 }
 
-.btn {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: var(--text);
+.container {
+  max-width: 1024px;
+  min-width: 1024px;
+  
 }
 
-.btn-reserveren {
-  color: var(--text);
+header {
+  background: var(--geel);
+  height: 45vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.top-section {
+  display: flex;
+  margin-left: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-and-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 75px;
+  transform: rotate(-12deg);
+}
+
+.cta-text {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  font-weight: 500;
+}
+
+.cta-button {
   background-color: var(--primary);
-  border-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.company-shoutout {
+  font-family: Beastly;
+  flex-grow: 1;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-left: 250px;
+  color: black;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 85%;
+  text-align: left;
 }
 
-.btn-reserveren:hover{
-  border-color: var(--light);
-  color: var(--text);
+.image-section-wrapper {
+  transform: rotate(-5deg);
+  display: flex;
+  justify-content: center;
 }
 
-/* extended version of btn-reserver */
-.btn-reserver-smallscreen {
-  color: var(--text);
-  background-color: var(--primary);
-  border-color: var(--primary);
+.image-section {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-  margin-bottom: 30px;
-  display: none;
+  position: relative;
 }
 
-.btn:hover {
-  border-color: var(--light);
-  background-color: var(--primary);
+.polaroid {
+  background: white;
+  padding: 5px 5px 40px;
+  border-radius: 5px;
+  border: 1px solid var(--dark);
+  margin: 0 10px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  
+}
+
+.polaroid img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.promise-banner {
+  background-color: var(--navbar);
+  color: var(--text);
+  padding: 10px;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%) rotate(5deg);
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+
+.promise-banner p {
+  margin: 0 10px;
 }
 
 /* styles.css */
@@ -81,16 +169,18 @@ body {
   font-weight: bold;
   font-style: normal;
 }
-
-
-.container {
-  flex: 1;
-  margin-top: 20px;
+@font-face {
+  font-family: 'Beastly';
+  src: url('resources/fonts/Beastly/BeastlyDemo-72Point.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 
-.card+.card {
+.main-content {
+  flex: 1;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -98,7 +188,6 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
-
 
 .page-title {
   text-align: center;
@@ -123,176 +212,18 @@ h1 {
   min-height: 100vh;
 }
 
-
-
-/* Custom Navbar background color 
-  .navbar.bg-light {
-    background-color: #FBF6E3 !important; /* Your custom color */
-
-/* Style for navbar items */
-.navbar {
-  display: flex;
-  margin-bottom: 20px;
-  font-weight: 600;
-  justify-content: flex-end;
-  /* Align items to the right */
-}
-
-/* Default logo height */
-.navbar-logo {
-  height: 100px;
-}
-
-.navbar-item {
-  display: inline-block;
-  padding: 10px 20px;
-  /* Adjust padding as needed */
-  text-decoration: none;
-  color: var(--text-navbar);
-  /* Default color */
-  transition: border-bottom 0.3s;
-  /* Smooth transition for underline */
-  text-align: right;
-}
-
-/* Underline effect on hover */
-.navbar-item:hover {
-  border-bottom: 2px solid var(var(--primary));
-  /* Underline color and thickness */
-}
-
-
-
-/* Adjustments for hamburger button */
-.navbar-toggler {
-  order: 1;
-  /* Set order to push it to the right */
-}
-
-
-.image-banner {
-  position: relative;
-
-  overflow: hidden;
-
-}
-
-.image-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--text);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner-text h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.banner-text p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.banner-text .btn {
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  color: var(--text);
-  text-decoration: none;
-  background-color: var(--primary);
-}
-
-.banner-text .btn:hover {
-      border-color: var(--light);
-    background-color: var(--primary);
-    /* Underline color and thickness */
-  }
-
-/* Card customization */
-.card {
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 0px, 0, 0, 0;
-}
-
-.card-body {
-  flex-direction: column;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-right: 30px; /* Adjust the padding to create space for the icon */
-}
-
-.card-zoom {
-  transition: transform 0.2s;
-  /* Zorgt voor een vloeiende overgang */
-}
-
-.card-zoom:hover {
-  transform: scale(1.05);
-}
-
-/* Style for the info icon */
-.info-icon {
-  position: absolute;
-  font-size: 1.2em;
-  top: 20px;
-  right: 30px;
-  cursor: pointer;
-  color: var(--info); /* Bootstrap primary color */
-}
-
-/* Information Section customization */
-.information-section img {
-  max-width: 100%;
-  max-height: 350px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.information-section h5 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-.information-section p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.information-section .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 /* Footer customization */
 footer {
-  background-color: var(--dark);
-  color: var(--text-footer);
+  background-color: var(--roze);
+  color: var(--body-text);
   padding: 20px 0;
-  border-radius: 10px;
+  
 }
 
 footer h5 {
   margin-bottom: 15px;
+  font-family: Beastly;
+  color: var(--secondary)
 }
 
 footer p {
@@ -307,6 +238,63 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/*index page */
+.row-content {
+  margin-top: 50px;
+}
+
+.step {
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.step img {
+  width: 400px;
+  margin-right: 20px;
+}
+
+.step-color1 {
+  color: var(--secondary)
+}
+.step-color2 {
+  color: var(--primary)
+}
+.step-color3 {
+  color: var(--donkerrood)
+}
+
+.step-content {
+  padding-left: 50px;
+}
+
+.step-text h3 {
+  margin-top: 0;
+}
+
+.step-subtitle {
+  font-family: Beastly;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.explanation-section {
+  background-color: var(--secondary);
+  color: var(--text-footer);
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 50px;
+  
+}
+
+.explanation-section h4 {
+  font-family: Beastly;
+
+}
+
+
 
 /* Reserven pagina */
 .products-container {
@@ -315,243 +303,17 @@ footer a:hover {
   /* Adjust space between items */
   flex-wrap: nowrap;
   /* Prevent wrapping */
-
 }
-
-
-
-
-/* Inspiratie pagina */
-.masonry {
-  column-count: 3;
-  column-gap: 1em;
-}
-
-.masonry-item {
-  display: inline-block;
-  background: white;
-  margin: 0 0 1em;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.masonry-item:hover {
-  transform: scale(1.05);
-}
-
-.masonry-item img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.masonry-item .content {
-  padding: 1em;
-}
-
-.masonry-item h5 {
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-}
-
-.masonry-item p {
-  color: #555;
-}
-
-
-
-
-/* faq section */
-.accordion {
-  width: 80%;
-  margin: 50px auto;
-  border-radius: 8px;
-  background-color: var(--body-bg);
-}
-
-.accordion-item {
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 10px;
-  outline: none;
-  /* Remove focus outline */
-  box-shadow: none;
-  /* Remove box shadow */
-  border: none;
-}
-
-.accordion-item:last-child {
-  border-bottom: none;
-}
-
-.accordion-button {
-  width: 100%;
-  text-align: left;
-  padding: 15px;
-  font-size: 18px;
-  background-color: var(--secondary);
-  color: var(--text);
-  border: none;
-  cursor: pointer;
-  outline: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 8px;
-  outline: none;
-  /* Remove focus outline */
-  box-shadow: none;
-  /* Remove box shadow */
-}
-
-.accordion-button:hover {
-  background-color: var(--primary);
-}
-
-.accordion-button i {
-  transition: transform 0.3s;
-}
-
-.accordion-item.active {
-  outline: none;
-  /* Remove focus outline */
-  box-shadow: none;
-  /* Remove box shadow */
-}
-
-.accordion-button.active i {
-  transform: rotate(180deg);
-}
-
-.accordion-content {
-  display: none;
-  padding: 15px;
-  background-color: var(--light);
-}
-
-.accordion-content p {
-  margin: 0;
-}
-
 
 /* queries for specific resolutions */
-@media (max-width: 768px) {
-  .banner-text .btn {
-      display: none; /* Hide the button in the banner on smaller screens */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    min-width: 0;
+    padding: 0 20px;
   }
 
-  .btn-reserver-smallscreen {
-    color: var(--text);
-    background-color: var(--primary);
-    border-color: var(--primary);
-    margin-top: 20px;
-    margin-bottom: -30px;
-    display: block;
+  header {
+    height: auto;
   }
-
-  .masonry {
-    column-count: 1;
-  }
-
-  .card {
-    margin-bottom: 20px;
-    /* Add margin below cards */
-  }
-
-  .products-container {
-    flex-direction: column;
-    /* Stack items vertically on smaller screens */
-    align-items: center;
-    /* Center items horizontally */
-  }
-  .card-title {
-    padding-right: 40px; /* Increase padding if needed */
-}
-
-.info-icon {
-    font-size: 1em; /* Adjust the icon size for smaller screens */
-
-}
-}
-
-@media (max-width: 480px) {
-  .navbar-logo {
-    height: 70px;
-    /* Adjust this value as needed for mobile devices */
-  }
-
-  .banner-text .btn {
-    font-size: 1rem;
-  }
-
-  .card {
-    margin-bottom: 20px;
-    /* Add margin below cards */
-  }
-
-  .masonry {
-    column-count: 1;
-  }
-}
-
-/*
-  .faq {
-    
-
-    width: 80%;
-
-    margin: 50px auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: var(--body-bg);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    margin: 5px;
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    font-size: 18px;
-    background-color: var(--light);;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.faq-question:hover {
-    background-color: var(--primary);
-    color: var(--secondary);
-}
-
-.faq-question i {
-    transition: transform 0.3s;
-}
-
-.faq-question.active i {
-    transform: rotate(180deg);
-    color: var(--secondary);
-}
-
-.faq-answer {
-    display: none;
-    padding: 15px;
-    background-color: color: var(--secondary);;
-    border-top: 1px solid #ddd;
 }
