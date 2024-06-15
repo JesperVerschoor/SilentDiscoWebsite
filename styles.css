@@ -23,6 +23,29 @@
   --text-footer: var(--light);
 }
 
+
+/* styles.css */
+@font-face {
+  font-family: 'Nohemi';
+  src: url('resources/fonts/Nohemi/Nohemi-Light.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('resources/fonts/Nohemi/Nohemi-Bold.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Beastly';
+  src: url('resources/fonts/Beastly/BeastlyDemo-72Point.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 html {
   box-sizing: border-box;
 }
@@ -113,6 +136,9 @@ header {
 .cta-button:active {
   background-color: #c6591f; /* Even darker orange on active */
 
+.cta-button-mobile {
+  display: none;
+}
 
 .company-shoutout {
   font-family: Beastly;
@@ -186,6 +212,7 @@ header {
   width: 40px; /* Adjust size as needed */
   height: 40px; /* Adjust size as needed */
   position: absolute;
+  z-index:0;
 }
 
 .promise-banner-star {
@@ -195,45 +222,22 @@ header {
 }
 
 .star1 {
-  top: 200px; /* Adjust position as needed */
-  left: 15px; /* Adjust position as needed */
+  top: 50%; /* Adjust position as needed */
+  left: 2%; /* Adjust position as needed */
 }
 
 .star2 {
-  top: -15px; /* Adjust position as needed */
-  right: 350px; /* Adjust position as needed */
+  top: -3%; /* Adjust position as needed */
+  right: 40%; /* Adjust position as needed */
   transform: rotate(-10deg);
 }
 
 .star3 {
-  top: 230px; /* Adjust position as needed */
-  right: 375px; /* Adjust position as needed */
+  top: 45%; /* Adjust position as needed */
+  right: 35%; /* Adjust position as needed */
   width: 20px; /* Adjust size as needed */
   height: 20px; /* Adjust size as needed */
   transform: rotate(50deg);
-}
-
-
-
-/* styles.css */
-@font-face {
-  font-family: 'Nohemi';
-  src: url('resources/Fonts/Nohemi/Nohemi-Light.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nohemi';
-  src: url('resources/fonts/Nohemi/Nohemi-Bold.ttf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Beastly';
-  src: url('resources/fonts/Beastly/BeastlyDemo-72Point.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
 }
 
 
@@ -368,12 +372,62 @@ footer a:hover {
 /* queries for specific resolutions */
 @media (max-width: 1024px) {
   .container {
-    /* max-width: 100%;
+    max-width: 100%;
     min-width: 0;
-    padding: 0 20px; */
   }
 
   header {
    /* height: auto; */
   }
 }
+/* queries for specific resolutions */
+@media (max-width: 450px) {
+
+  header {
+    height: fit-content;
+    margin-bottom: auto;
+   }
+   .image-section-wrapper {
+    display: none;
+   }
+   .promise-banner { 
+    display: none;
+   }
+   .top-section {
+    display: flex;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .logo-and-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    display: none;
+  }
+  
+  .cta-button-mobile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .company-shoutout {
+    font-family: Beastly;
+    flex-grow: 1;
+    margin-top: 0px;
+    margin-left: 20px;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 85%;
+    text-align: left;
+  }
+
+}
+
+
