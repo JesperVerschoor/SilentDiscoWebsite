@@ -59,7 +59,7 @@ body {
   font-family: Nohemi, sans-serif;
   background-color: var(--body-bg);
   color: var(--body-color);
-  margin: 0;
+  margin: 0; 
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -67,8 +67,10 @@ body {
 }
 
 .container {
-  max-width: 1024px;
-  min-width: 1024px;
+  
+
+  
+
   
 }
 
@@ -78,17 +80,17 @@ header {
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  height: 500px;
-  margin-bottom: 100px;
+  height: 600px;
+  margin-bottom: 120px;
   overflow: visible; /* Ensure overflow doesn't affect layout */
 }
 
 .top-section {
-  display: flex;
-  margin-left: 80px;
+
+  margin: 0 auto; /* centreer truckje */ 
+  max-width: 1024px; /* centreer truckje */ 
   align-items: center;
-  justify-content: center;
-  
+  flex-direction: column;
 }
 
 .logo-and-cta {
@@ -103,11 +105,10 @@ header {
 }
 
 .cta-text {
-  margin: 10px 0;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
-  max-width: 300px;
   font-weight: 500;
+  text-align: center;
 }
 
 .cta-button {
@@ -142,14 +143,12 @@ header {
 
 .company-shoutout {
   font-family: Beastly;
-  flex-grow: 1;
   margin-top: 20px;
-  margin-left: 250px;
-  color: black;
+    color: black;
   font-size: 3rem;
   font-weight: 400;
   line-height: 85%;
-  text-align: left;
+  text-align: center;
 }
 
 .image-section-wrapper {
@@ -157,12 +156,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 85%; /* Position at 50% from top */
-  left: 50%; /* Position at 50% from left */
-  transform: translate(-50%, -50%) rotate(-5deg); /* Center and rotate */
+  position: relative;
 }
-
 
 .image-section {
   display: flex;
@@ -178,12 +173,11 @@ header {
   border: 1px solid var(--dark);
   margin: 0 10px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-
 }
 
 .polaroid img {
-  width: 250px;
-  height: 250px;
+  width: 540px;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -198,7 +192,7 @@ header {
   transform: translateX(-50%) rotate(5deg);
   display: flex;
   justify-content: space-between;
-  width: 110%;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   font-size: 0.75rem;
   font-weight: 600;
@@ -233,7 +227,7 @@ header {
 }
 
 .star3 {
-  top: 45%; /* Adjust position as needed */
+  top: 35%; /* Adjust position as needed */
   right: 35%; /* Adjust position as needed */
   width: 20px; /* Adjust size as needed */
   height: 20px; /* Adjust size as needed */
@@ -371,10 +365,7 @@ footer a:hover {
 
 /* queries for specific resolutions */
 @media (max-width: 1024px) {
-  .container {
-    max-width: 100%;
-    min-width: 0;
-  }
+
 
   header {
    /* height: auto; */
