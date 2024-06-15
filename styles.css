@@ -51,11 +51,13 @@ body {
 
 header {
   background: var(--geel);
-  height: 45vh;
+  /* height: 45vh;  Dit maakt de header gevoelig voor non full page */
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  margin-bottom: 75px;
+  height: 500px;
+  margin-bottom: 100px;
+  overflow: visible; /* Ensure overflow doesn't affect layout */
 }
 
 .top-section {
@@ -63,6 +65,7 @@ header {
   margin-left: 80px;
   align-items: center;
   justify-content: center;
+  
 }
 
 .logo-and-cta {
@@ -85,14 +88,31 @@ header {
 }
 
 .cta-button {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
+  background-color: transparent; /* Fallback color */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-family: 'Nohemi', sans-serif; /* Font family */
+  font-size: 1.2rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  display: inline-block; /* Inline block for padding */
+  text-align: center; /* Center the text */
+  background-image: url('resources/svg/ctabutton.svg'); /* Path to your SVG */
+  background-size: cover; /* Cover the entire button */
+  background-repeat: no-repeat; /* No repeat */
+  border-radius: 15px; /* Rounded corners if needed */
+  position: relative; /* Position relative for pseudo-elements */
+  overflow: hidden; /* Hide overflow of pseudo-elements */
 }
+
+.cta-button:hover {
+  background-color: #e06d27; /* Darker orange on hover */
+}
+/*
+.cta-button:active {
+  background-color: #c6591f; /* Even darker orange on active */
+
 
 .company-shoutout {
   font-family: Beastly;
@@ -110,12 +130,18 @@ header {
   transform: rotate(-5deg);
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 85%; /* Position at 50% from top */
+  left: 50%; /* Position at 50% from left */
+  transform: translate(-50%, -50%) rotate(-5deg); /* Center and rotate */
 }
+
 
 .image-section {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
   position: relative;
 }
 
@@ -126,11 +152,11 @@ header {
   border: 1px solid var(--dark);
   margin: 0 10px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-  
+
 }
 
 .polaroid img {
-  width: 200px;
+  width: 250px;
   height: 250px;
   object-fit: cover;
 }
@@ -139,21 +165,55 @@ header {
   background-color: var(--navbar);
   color: var(--text);
   padding: 10px;
+  position: relative;
   position: absolute;
-  bottom: -60px;
+  top: 110%; /* Position at 50% from top */
   left: 50%;
   transform: translateX(-50%) rotate(5deg);
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 110%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-size: 0.5rem;
-  font-weight: 800;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .promise-banner p {
   margin: 0 10px;
 }
+
+.star {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  position: absolute;
+}
+
+.promise-banner-star {
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+.star1 {
+  top: 200px; /* Adjust position as needed */
+  left: 15px; /* Adjust position as needed */
+}
+
+.star2 {
+  top: -15px; /* Adjust position as needed */
+  right: 350px; /* Adjust position as needed */
+  transform: rotate(-10deg);
+}
+
+.star3 {
+  top: 230px; /* Adjust position as needed */
+  right: 375px; /* Adjust position as needed */
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  transform: rotate(50deg);
+}
+
+
 
 /* styles.css */
 @font-face {
@@ -308,12 +368,12 @@ footer a:hover {
 /* queries for specific resolutions */
 @media (max-width: 1024px) {
   .container {
-    max-width: 100%;
+    /* max-width: 100%;
     min-width: 0;
-    padding: 0 20px;
+    padding: 0 20px; */
   }
 
   header {
-    height: auto;
+   /* height: auto; */
   }
 }
