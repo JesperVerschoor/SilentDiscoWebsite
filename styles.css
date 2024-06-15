@@ -156,14 +156,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative;  
+  overflow: hidden;
 }
 
 .image-section {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  position: relative;
+  margin-top: 40px;
+  
 }
 
 .polaroid {
@@ -185,17 +186,15 @@ header {
   background-color: var(--navbar);
   color: var(--text);
   padding: 10px;
-  position: relative;
-  position: absolute;
-  top: 110%; /* Position at 50% from top */
-  left: 50%;
-  transform: translateX(-50%) rotate(5deg);
-  display: flex;
-  justify-content: space-between;
   width: 100%;
+  position: relative;
+  transform:  rotate(5deg);
+  display: flex;
+  justify-content: space-evenly;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   font-size: 0.75rem;
   font-weight: 600;
+  
 }
 
 .promise-banner p {
@@ -236,7 +235,6 @@ header {
 
 
 .main-content {
-  flex: 1;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -297,21 +295,11 @@ footer a:hover {
   text-decoration: underline;
 }
 /*index page */
-.row-content {
-  margin-top: 50px;
-}
 
-.step {
-  padding-left: 80px;
-  padding-right: 80px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
 
 .step img {
-  width: 400px;
-  margin-right: 20px;
+
+  
 }
 
 .step-color1 {
@@ -324,8 +312,8 @@ footer a:hover {
   color: var(--donkerrood)
 }
 
-.step-content {
-  padding-left: 50px;
+.step-text-section {
+ padding: 15px;
 }
 
 .step-text h3 {
@@ -337,6 +325,9 @@ footer a:hover {
   font-size: 2rem;
   margin-bottom: 5px;
 }
+
+
+
 
 .explanation-section {
   background-color: var(--secondary);
@@ -363,14 +354,8 @@ footer a:hover {
   /* Prevent wrapping */
 }
 
-/* queries for specific resolutions */
-@media (max-width: 1024px) {
 
 
-  header {
-   /* height: auto; */
-  }
-}
 /* queries for specific resolutions */
 @media (max-width: 450px) {
 
@@ -378,46 +363,21 @@ footer a:hover {
     height: fit-content;
     margin-bottom: auto;
    }
-   .image-section-wrapper {
-    display: none;
-   }
-   .promise-banner { 
-    display: none;
-   }
-   .top-section {
-    display: flex;
-    margin-left: 0;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .logo-and-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .cta-button {
-    display: none;
+   .polaroid img {
+    width: 150px;
+    height: 150px;
   }
-  
-  .cta-button-mobile{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
+  .promise-banner {
+    font-size: 0.55rem;
   }
 
   .company-shoutout {
-    font-family: Beastly;
-    flex-grow: 1;
-    margin-top: 0px;
-    margin-left: 20px;
-    color: black;
     font-size: 2rem;
     font-weight: 400;
-    line-height: 85%;
-    text-align: left;
   }
+  
+
 
 }
 
