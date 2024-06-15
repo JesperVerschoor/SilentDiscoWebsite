@@ -68,7 +68,7 @@ body {
 
 .container {
   
-margin-bottom: 20px;
+  margin-bottom: 20px;
   
 
   
@@ -77,16 +77,15 @@ margin-bottom: 20px;
 header {
   background: var(--geel);
   /* height: 45vh;  Dit maakt de header gevoelig voor non full page */
-  padding: 20px;
   box-sizing: border-box;
   position: relative;
-  height: 600px;
+  height: 580px;
   margin-bottom: 120px;
+  padding-top: 20px;
   overflow: visible; /* Ensure overflow doesn't affect layout */
 }
 
 .top-section {
-
   margin: 0 auto; /* centreer truckje */ 
   max-width: 1024px; /* centreer truckje */ 
   align-items: center;
@@ -158,6 +157,7 @@ header {
   align-items: center;
   position: relative;  
   overflow: hidden;
+  
 }
 
 .image-section {
@@ -233,6 +233,42 @@ header {
   transform: rotate(50deg);
 }
 
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.banner-text .btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--text);
+  text-decoration: none;
+  background-color: var(--navbar);
+  transform:  rotate(5deg);
+}
+
+.banner-text .btn:hover {
+      border-color: var(--navbar);
+    background-color: var(--navbar);
+    /* Underline color and thickness */
+  }
 
 .main-content {
   margin-top: 20px;
@@ -294,6 +330,23 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Control size */
+.footer-logo {
+  width: 300px;  /* Adjust the width as needed */
+  height: auto;  /* Maintain aspect ratio */
+
+}
+
+.footer-gras {
+  width: 100%;  /* Adjust the width as needed */
+  height: auto;  /* Maintain aspect ratio */
+  overflow: hidden;
+  
+}
+
+
+
 /*index page */
 
 
@@ -448,6 +501,9 @@ footer a:hover {
     font-weight: 400;
   }
   
+  .banner-text .btn {
+    font-size: 1rem;
+  }
 
 
 }
