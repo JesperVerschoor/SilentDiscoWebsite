@@ -68,7 +68,7 @@ body {
 
 .container {
   
-
+margin-bottom: 20px;
   
 
   
@@ -343,6 +343,77 @@ footer a:hover {
 
 }
 
+/* faq section */
+.accordion {
+  width: 100%;
+  
+  border-radius: 8px;
+}
+
+.accordion-item {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  outline: none;
+  /* Remove focus outline */
+  box-shadow: none;
+  /* Remove box shadow */
+  border: none;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-size: 18px;
+  background-color: var(--secondary);
+  color: var(--text-footer);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+  outline: none;
+  /* Remove focus outline */
+  box-shadow: none;
+  /* Remove box shadow */
+}
+
+.accordion-button:hover {
+  background-color: var(--primary);
+}
+
+.accordion-button i {
+  transition: transform 0.3s;
+}
+
+.accordion-item.active {
+  outline: none;
+  /* Remove focus outline */
+  box-shadow: none;
+  /* Remove box shadow */
+}
+
+.accordion-button.active i {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: var(--secondary);
+}
+
+.accordion-content p {
+  margin: 0;
+}
 
 
 /* Reserven pagina */
