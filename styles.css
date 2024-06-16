@@ -149,6 +149,7 @@ header {
 
 .cta-button:hover {
   background-color: var(--primary);
+  color: var(--body-text);
   /* Darker orange on hover */
 }
 
