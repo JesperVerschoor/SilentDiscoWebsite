@@ -70,11 +70,7 @@ body {
 }
 
 .container {
-
   margin-bottom: 20px;
-
-
-
 }
 
 header {
@@ -152,17 +148,13 @@ header {
 }
 
 .cta-button:hover {
-  background-color: #e06d27;
+  background-color: var(--primary);
   /* Darker orange on hover */
 }
 
 /*
 .cta-button:active {
   background-color: #c6591f; /* Even darker orange on active */
-
-.cta-button-mobile {
-  display: none;
-}
 
 .company-shoutout {
   font-family: Beastly;
@@ -200,7 +192,7 @@ header {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.polaroid img {
+.polaroid-img {
   width: 540px;
   height: 350px;
   object-fit: cover;
@@ -302,6 +294,86 @@ header {
   border-color: var(--navbar);
   background-color: var(--navbar);
   /* Underline color and thickness */
+}
+
+/*menu */
+.menu-container {
+  position: absolute;
+  overflow: visible;
+  top: 425px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-button {
+  background-color: transparent;
+  /* Fallback color */
+  color: var(--body-text);
+  /* White text */
+  border: none;
+  /* No border */
+  margin-top: 10px;
+  padding: 10px 20px;
+  /* Padding inside the button */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-family: 'Beastly', sans-serif;
+  /* Font family */
+  font-size: 1.2rem;
+  /* Font size */
+  font-weight: bold;
+  /* Bold text */
+  display: inline-block;
+  /* Inline block for padding */
+  text-align: center;
+  /* Center the text */
+  background-image: url('resources/svg/menubutton.svg');
+  /* Path to your SVG */
+  background-size: cover;
+  /* Cover the entire button */
+  background-repeat: no-repeat;
+  /* No repeat */
+  border-radius: 15px;
+  /* Rounded corners if needed */
+  position: relative;
+  /* Position relative for pseudo-elements */
+  overflow: hidden;
+  /* Hide overflow of pseudo-elements */
+}
+
+.cta-button:hover {
+  background-color: var(--primary);
+  /* Darker orange on hover */
+}
+
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.menu-items {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: var(--navbar);
+  padding: 10px;
+  bottom: 100%; /* Position the menu above the button */
+  width: 175px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  text-align: center;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.menu-items a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: var(--body-text);
+  font-weight: 600;
 }
 
 .main-content {
@@ -533,14 +605,14 @@ footer a:hover {
 
 
 /* queries for specific resolutions */
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 
   header {
     height: fit-content;
     margin-bottom: auto;
   }
 
-  .polaroid img {
+  .polaroid-img {
     width: 150px;
     height: 150px;
   }

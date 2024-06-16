@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("navbar.html")
+    fetch("navmenu.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById("navbar-placeholder").innerHTML = data;
+            document.getElementById("navmenu-placeholder").innerHTML = data;
         });
     
        fetch("header.html")
@@ -49,7 +49,29 @@ var booqableOptions = {
 };
 
 
-//reserveren information icon
+//menu
+/* script.js */
+function toggleMenu() {
+    const menuItems = document.getElementById('menu-items');
+    const menuButton = document.getElementById('menu-button');
+
+    if (menuItems.style.display === 'none' || menuItems.style.display === '') {
+        menuItems.style.display = 'block';
+        // Change button to close button
+        menuButton.innerHTML = `
+            <img src="resources/svg/close.svg" alt="Close Icon" class="menu-icon">
+            <span>sluiten</span>
+        `;
+    } else {
+        menuItems.style.display = 'none';
+        // Change button back to menu button
+        menuButton.innerHTML = `
+            <img src="resources/svg/list.svg" alt="Menu Icon" class="menu-icon">
+            <span>menu</span>
+        `;
+    }
+}
+
 
 
 //FAQ accordion list
