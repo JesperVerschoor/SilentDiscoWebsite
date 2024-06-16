@@ -49,6 +49,7 @@
 
 html {
   box-sizing: border-box;
+ 
 }
 
 *,
@@ -167,13 +168,14 @@ header {
   text-align: center;
 }
 
+
 .image-section-wrapper {
   transform: rotate(-5deg);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+overflow: hidden;
 
 }
 
