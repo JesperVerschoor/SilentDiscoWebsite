@@ -9,7 +9,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
-  
+
   --geel: #f8d354;
   --roze: #f4b6d1;
   --donkerrood: #470f0f;
@@ -38,6 +38,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Beastly';
   src: url('resources/fonts/Beastly/BeastlyDemo-72Point.otf') format('opentype');
@@ -50,7 +51,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -59,7 +62,7 @@ body {
   font-family: Nohemi, sans-serif;
   background-color: var(--body-bg);
   color: var(--body-color);
-  margin: 0; 
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -67,11 +70,11 @@ body {
 }
 
 .container {
-  
-  margin-bottom: 20px;
-  
 
-  
+  margin-bottom: 20px;
+
+
+
 }
 
 header {
@@ -82,12 +85,15 @@ header {
   height: 580px;
   margin-bottom: 120px;
   padding-top: 20px;
-  overflow: visible; /* Ensure overflow doesn't affect layout */
+  overflow: visible;
+  /* Ensure overflow doesn't affect layout */
 }
 
 .top-section {
-  margin: 0 auto; /* centreer truckje */ 
-  max-width: 1024px; /* centreer truckje */ 
+  margin: 0 auto;
+  /* centreer truckje */
+  max-width: 1024px;
+  /* centreer truckje */
   align-items: center;
   flex-direction: column;
 }
@@ -111,27 +117,45 @@ header {
 }
 
 .cta-button {
-  background-color: transparent; /* Fallback color */
-  color: white; /* White text */
-  border: none; /* No border */
-  padding: 10px 20px; /* Padding inside the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-family: 'Nohemi', sans-serif; /* Font family */
-  font-size: 1.2rem; /* Font size */
-  font-weight: bold; /* Bold text */
-  display: inline-block; /* Inline block for padding */
-  text-align: center; /* Center the text */
-  background-image: url('resources/svg/ctabutton.svg'); /* Path to your SVG */
-  background-size: cover; /* Cover the entire button */
-  background-repeat: no-repeat; /* No repeat */
-  border-radius: 15px; /* Rounded corners if needed */
-  position: relative; /* Position relative for pseudo-elements */
-  overflow: hidden; /* Hide overflow of pseudo-elements */
+  background-color: transparent;
+  /* Fallback color */
+  color: white;
+  /* White text */
+  border: none;
+  /* No border */
+  padding: 10px 20px;
+  /* Padding inside the button */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-family: 'Nohemi', sans-serif;
+  /* Font family */
+  font-size: 1.2rem;
+  /* Font size */
+  font-weight: bold;
+  /* Bold text */
+  display: inline-block;
+  /* Inline block for padding */
+  text-align: center;
+  /* Center the text */
+  background-image: url('resources/svg/ctabutton.svg');
+  /* Path to your SVG */
+  background-size: cover;
+  /* Cover the entire button */
+  background-repeat: no-repeat;
+  /* No repeat */
+  border-radius: 15px;
+  /* Rounded corners if needed */
+  position: relative;
+  /* Position relative for pseudo-elements */
+  overflow: hidden;
+  /* Hide overflow of pseudo-elements */
 }
 
 .cta-button:hover {
-  background-color: #e06d27; /* Darker orange on hover */
+  background-color: #e06d27;
+  /* Darker orange on hover */
 }
+
 /*
 .cta-button:active {
   background-color: #c6591f; /* Even darker orange on active */
@@ -143,7 +167,7 @@ header {
 .company-shoutout {
   font-family: Beastly;
   margin-top: 20px;
-    color: black;
+  color: black;
   font-size: 3rem;
   font-weight: 400;
   line-height: 85%;
@@ -155,16 +179,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;  
+  position: relative;
   overflow: hidden;
-  
+
 }
 
 .image-section {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  
+
 }
 
 .polaroid {
@@ -173,7 +197,7 @@ header {
   border-radius: 5px;
   border: 1px solid var(--dark);
   margin: 0 10px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .polaroid img {
@@ -188,13 +212,13 @@ header {
   padding: 10px;
   width: 100%;
   position: relative;
-  transform:  rotate(5deg);
+  transform: rotate(5deg);
   display: flex;
   justify-content: space-evenly;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 0.75rem;
   font-weight: 600;
-  
+
 }
 
 .promise-banner p {
@@ -202,10 +226,12 @@ header {
 }
 
 .star {
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
+  width: 40px;
+  /* Adjust size as needed */
+  height: 40px;
+  /* Adjust size as needed */
   position: absolute;
-  z-index:0;
+  z-index: 0;
 }
 
 .promise-banner-star {
@@ -215,21 +241,29 @@ header {
 }
 
 .star1 {
-  top: 50%; /* Adjust position as needed */
-  left: 2%; /* Adjust position as needed */
+  top: 50%;
+  /* Adjust position as needed */
+  left: 2%;
+  /* Adjust position as needed */
 }
 
 .star2 {
-  top: -3%; /* Adjust position as needed */
-  right: 40%; /* Adjust position as needed */
+  top: -3%;
+  /* Adjust position as needed */
+  right: 40%;
+  /* Adjust position as needed */
   transform: rotate(-10deg);
 }
 
 .star3 {
-  top: 35%; /* Adjust position as needed */
-  right: 35%; /* Adjust position as needed */
-  width: 20px; /* Adjust size as needed */
-  height: 20px; /* Adjust size as needed */
+  top: 35%;
+  /* Adjust position as needed */
+  right: 35%;
+  /* Adjust position as needed */
+  width: 20px;
+  /* Adjust size as needed */
+  height: 20px;
+  /* Adjust size as needed */
   transform: rotate(50deg);
 }
 
@@ -261,14 +295,14 @@ header {
   color: var(--text);
   text-decoration: none;
   background-color: var(--navbar);
-  transform:  rotate(5deg);
+  transform: rotate(5deg);
 }
 
 .banner-text .btn:hover {
-      border-color: var(--navbar);
-    background-color: var(--navbar);
-    /* Underline color and thickness */
-  }
+  border-color: var(--navbar);
+  background-color: var(--navbar);
+  /* Underline color and thickness */
+}
 
 .main-content {
   margin-top: 20px;
@@ -309,7 +343,7 @@ footer {
   background-color: var(--roze);
   color: var(--body-text);
   padding: 20px 0;
-  
+
 }
 
 footer h5 {
@@ -333,16 +367,20 @@ footer a:hover {
 
 /* Control size */
 .footer-logo {
-  width: 300px;  /* Adjust the width as needed */
-  height: auto;  /* Maintain aspect ratio */
+  width: 300px;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
 
 }
 
 .footer-gras {
-  width: 100%;  /* Adjust the width as needed */
-  height: auto;  /* Maintain aspect ratio */
+  width: 100%;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
   overflow: hidden;
-  
+
 }
 
 
@@ -350,23 +388,37 @@ footer a:hover {
 /*index page */
 
 
-.step img {
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  /* Allow the icon container to have its own height */
+  height: auto;
+  /* Ensure the container height adjusts to the content */
+  padding: 10px;
+  /* Optional: add some padding if necessary */
+}
 
-  
+.step img {
+  max-height: 150px;
+  /* Limit the icon height if necessary */
 }
 
 .step-color1 {
   color: var(--secondary)
 }
+
 .step-color2 {
   color: var(--primary)
 }
+
 .step-color3 {
   color: var(--donkerrood)
 }
 
 .step-text-section {
- padding: 15px;
+  padding: 15px;
 }
 
 .step-text h3 {
@@ -388,7 +440,7 @@ footer a:hover {
   padding-top: 50px;
   padding-left: 100px;
   padding-right: 50px;
-  
+
 }
 
 .explanation-section h4 {
@@ -399,7 +451,7 @@ footer a:hover {
 /* faq section */
 .accordion {
   width: 100%;
-  
+
   border-radius: 8px;
 }
 
@@ -481,17 +533,18 @@ footer a:hover {
 
 
 /* queries for specific resolutions */
-@media (max-width: 450px) {
+@media (max-width: 1024px) {
 
   header {
     height: fit-content;
     margin-bottom: auto;
-   }
+  }
 
-   .polaroid img {
+  .polaroid img {
     width: 150px;
     height: 150px;
   }
+
   .promise-banner {
     font-size: 0.55rem;
   }
@@ -500,12 +553,16 @@ footer a:hover {
     font-size: 2rem;
     font-weight: 400;
   }
-  
+
   .banner-text .btn {
     font-size: 1rem;
   }
 
+  .star2 {
+    right: 10%;
+  }
 
+  .star3 {
+    right: 15%
+  }
 }
-
-
