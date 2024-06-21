@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+    fetch("headerPages.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("headerPages-placeholder").innerHTML = data;
+    });
+
     fetch("navmenu.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("navmenu-placeholder").innerHTML = data;
-        });
-    
-       fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
         });
 
     fetch("footer.html")
